@@ -7385,6 +7385,62 @@
     <span class="p">)</span></div>
 
 
+<div class="viewcode-block" id="adaptive_avg_pool1d"><a class="viewcode-back" href="../../../functional/ivy/experimental/adaptive_avg_pool1d/adaptive_avg_pool1d_array.html#ivy.array.array_methods.adaptive_avg_pool1d">[docs]</a><span class="k">def</span> <span class="nf">adaptive_avg_pool1d</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+    <span class="n">output_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies a 1D adaptive average pooling over an input signal composed of several</span>
+<span class="sd">    input planes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self</span>
+<span class="sd">        Input array. Must have shape (N, C, L_in) or (C, L_in) where N is</span>
+<span class="sd">        the batch dimension, C is the feature dimension, and L_in is the spatial</span>
+<span class="sd">        dimension.</span>
+<span class="sd">    output_size</span>
+<span class="sd">        Spatial output size.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        The result of the pooling operation. Will have shape (N, C, L_out) or</span>
+<span class="sd">        (C, L_out), where L_out = `output_size`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">adaptive_avg_pool1d</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span>
+        <span class="n">output_size</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="adaptive_avg_pool2d"><a class="viewcode-back" href="../../../functional/ivy/experimental/adaptive_avg_pool2d/adaptive_avg_pool2d_array.html#ivy.array.array_methods.adaptive_avg_pool2d">[docs]</a><span class="k">def</span> <span class="nf">adaptive_avg_pool2d</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+    <span class="n">output_size</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">],</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies a 2D adaptive average pooling over an input signal composed of several</span>
+<span class="sd">    input planes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self</span>
+<span class="sd">        Input array. Must have shape (N, C, H_in, W_in) or (C, H_in, W_in) where N</span>
+<span class="sd">        is the batch dimension, C is the feature dimension, and H_in and W_in are</span>
+<span class="sd">        the 2 spatial dimensions.</span>
+<span class="sd">    output_size</span>
+<span class="sd">        Spatial output size.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">        The result of the pooling operation. Will have shape (N, C, S_0, S_1) or</span>
+<span class="sd">        (C, S_0, S_1), where S = `output_size`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">adaptive_avg_pool2d</span><span class="p">(</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span>
+        <span class="n">output_size</span><span class="p">,</span>
+    <span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="l2_normalize"><a class="viewcode-back" href="../../../functional/ivy/experimental/l2_normalize/l2_normalize_array.html#ivy.array.array_methods.l2_normalize">[docs]</a><span class="k">def</span> <span class="nf">l2_normalize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Normalizes the array to have unit L2 norm.</span>
 
